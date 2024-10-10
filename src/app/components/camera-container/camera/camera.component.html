@@ -1,0 +1,26 @@
+<div class="camera-info">
+  <h1 class="camera-name">{{ name }}</h1>
+  <div class="frame-container">
+    <img
+      class="frame"
+      [src]="url"
+      [ngClass]="{ fallback: isFallbackImage }"
+      (error)="onImageError()"
+    />
+    <!-- 
+    Why is this not working? No idea
+    @if("isFallbackImage") {
+    <div class="error-message-container">
+      <p class="error-message">
+        Error: Camera stream is not in the running state
+      </p>
+    </div>
+    } 
+    -->
+    <div *ngIf="isFallbackImage" class="error-message-container">
+      <p class="error-message">
+        Error: Camera stream is not in the running state.
+      </p>
+    </div>
+  </div>
+</div>

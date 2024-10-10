@@ -1,0 +1,48 @@
+:host {
+  .camera-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 20px;
+  }
+
+  .camera-name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    margin-bottom: 10px;
+  }
+
+  .frame-container {
+    height: 400px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(195, 195, 195);
+  }
+
+  img.frame {
+    height: 100%;
+    width: 100%;
+  }
+
+  img.fallback {
+    height: 20%;
+    width: 20%;
+    margin: 10px;
+  }
+
+  .error-message-container {
+    width: 75%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .error-message {
+    text-align: center;
+  }
+}

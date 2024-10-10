@@ -1,0 +1,18 @@
+<div class="camera-container">
+  <!-- 
+  The @for block renders its content in response to changes in a collection.
+    - In this case, we loop through the array of CameraInterface objects and 
+      assign each one's attributes to the corresponding input values of the 
+      Camera child component
+       If the array is empty, an error message is displayed instead.
+  -->
+  @for (camera of cameras; track camera.streamId) {
+  <app-camera
+    [name]="camera.name"
+    [streamId]="camera.streamId"
+    [url]="camera.url"
+  ></app-camera>
+  } @empty {
+  <p>Error displaying cameras</p>
+  }
+</div>
