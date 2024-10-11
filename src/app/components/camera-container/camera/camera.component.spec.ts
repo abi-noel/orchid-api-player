@@ -24,7 +24,6 @@ describe('CameraComponent', () => {
     fixture = TestBed.createComponent(CameraComponent);
     component = fixture.componentInstance;
 
-    // Dummy data
     component.name = 'Test Camera';
     component.streamId = 123;
     component.url = 'http://test-url.com/stream';
