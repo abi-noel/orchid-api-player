@@ -6,7 +6,6 @@ import {
   OnInit,
 } from '@angular/core';
 import { OrchidService } from '../../services/orchid.service';
-import { write } from 'fs';
 
 /*
 Camera interface

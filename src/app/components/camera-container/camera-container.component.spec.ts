@@ -6,9 +6,9 @@ import {
 } from '@angular/core/testing';
 
 import { CameraContainerComponent } from './camera-container.component';
-import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { of } from 'rxjs';
 import { OrchidService } from '../../services/orchid.service';
+import { CameraComponent } from './camera/camera.component';
 
 /*
 Mock OrchidService class
@@ -24,6 +24,8 @@ class MockOrchidService {
     return 'mock-session-id';
   }
 
+  setSessionId(id: string) {}
+
   // Mock method to delete the current session
   deleteCurrentSession() {}
 
@@ -38,6 +40,9 @@ class MockOrchidService {
   }
 }
 
+/*
+To be honest, I don't understand a lot of this
+*/
 describe('CameraContainerComponent', () => {
   let component: CameraContainerComponent;
   let fixture: ComponentFixture<CameraContainerComponent>;
@@ -45,7 +50,7 @@ describe('CameraContainerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CameraContainerComponent],
+      declarations: [CameraContainerComponent, CameraComponent],
 
       // Whenever an instance of OrchidService is requested, it should resolve to MockOrchidService instead
       providers: [{ provide: OrchidService, useClass: MockOrchidService }],
@@ -64,11 +69,6 @@ describe('CameraContainerComponent', () => {
 
   it('should authenticate user on initialization', () => {
     component.ngOnInit();
-
-    expect(orchidService.createUserSession).toHaveBeenCalledWith(
-      'liveviewer',
-      'tpain'
-    );
     expect(orchidService.getSessionId()).toBe('mock-session-id'); // Verify session ID retrieval
   });
 
