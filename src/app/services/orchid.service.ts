@@ -91,9 +91,9 @@ export class OrchidService {
   /*
   Clean up the created session each time the page is reloaded
   */
-  deleteCurrentSession() {
+  deleteCurrentSession(): Observable<any> {
     const url = `${this.base_url}sessions/me`;
-    this.http.delete(url, {
+    return this.http.delete(url, {
       headers: new HttpHeaders({
         accept: 'application/json',
       }),
