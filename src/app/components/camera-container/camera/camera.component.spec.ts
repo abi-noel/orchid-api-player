@@ -1,5 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/*
+Unit tests in Angular (comments for beginners like me)
+The auto-generated test code simply asserts successful component creation
+*/
 
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CameraComponent } from './camera.component';
 
 describe('CameraComponent', () => {
@@ -8,9 +12,8 @@ describe('CameraComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CameraComponent]
-    })
-    .compileComponents();
+      declarations: [CameraComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CameraComponent);
     component = fixture.componentInstance;
