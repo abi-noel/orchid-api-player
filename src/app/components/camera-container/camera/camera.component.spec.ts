@@ -6,6 +6,12 @@ The auto-generated test code simply asserts successful component creation
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CameraComponent } from './camera.component';
 
+/*
+Each describe block contains related tests
+The first parameter is the name for the test suite, it is displayed upon
+running the tests
+The second param holds the entire test code
+*/
 describe('CameraComponent', () => {
   let component: CameraComponent;
   let fixture: ComponentFixture<CameraComponent>;
@@ -18,6 +24,7 @@ describe('CameraComponent', () => {
     fixture = TestBed.createComponent(CameraComponent);
     component = fixture.componentInstance;
 
+    // Dummy data
     component.name = 'Test Camera';
     component.streamId = 123;
     component.url = 'http://test-url.com/stream';
