@@ -17,10 +17,28 @@ describe('CameraComponent', () => {
 
     fixture = TestBed.createComponent(CameraComponent);
     component = fixture.componentInstance;
+
+    component.name = 'Test Camera';
+    component.streamId = 123;
+    component.url = 'http://test-url.com/stream';
+
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have correct @Input values', () => {
+    expect(component.name).toBe('Test Camera');
+    expect(component.streamId).toBe(123);
+    expect(component.url).toBe('http://test-url.com/stream');
+  });
+
+  it('should set fallback image on error', () => {
+    component.onImageError(); // Simulate the image error event
+
+    expect(component.url).toBe('./frowning-face-icon.png');
+    expect(component.isFallbackImage).toBe(true);
   });
 });
