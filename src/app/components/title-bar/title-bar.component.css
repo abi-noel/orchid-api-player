@@ -1,0 +1,30 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #642b6d;
+
+  z-index: 1;
+
+  transition: top 0.5s;
+}
+
+/*Class will be displayed when the user scrolls up*/
+.navbar.hidden {
+  top: -80px;
+  box-shadow: none;
+}
+
+h1 {
+  margin-left: 100px;
+  font-family: "Josefin Sans", "sans-serif";
+  font-weight: 1000;
+}

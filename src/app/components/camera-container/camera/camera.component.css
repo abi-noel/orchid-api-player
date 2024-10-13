@@ -8,10 +8,21 @@
     margin: 20px;
   }
 
+  .camera-info:hover {
+    box-shadow: 0px 0px 20px 5px black;
+  }
+
   .camera-name {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
-    margin-bottom: 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bolder;
+    font-size: 20px;
+    color: black;
+    background-color: rgb(64, 64, 64);
+    width: 400px;
+    height: 35px;
+
+    text-align: center;
+    padding: 6px 0 6px 0;
   }
 
   .frame-container {

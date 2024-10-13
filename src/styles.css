@@ -4,3 +4,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.background {
+  background-color: #1d1d1d;
+  overflow-x: hidden;
+}
+
+.josefin-sans {
+  font-family: "Josefin Sans";
+}
