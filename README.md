@@ -2,7 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.2.
 The generated webapp retreives one frame every five seconds from all cameras from the Orchid Core VMS server at https://orchid.ipconfigure.com.
+
+## Developer's Notes
+
+Much of this project involved learning on the fly. This was my first time using Angular services, unit testing in Angular, and only my second time interacting with an API.
+As such, some of the code may appear over-documented. Such comments are more for me (the developer) than those more familiar with Angular.
+
 The app is partially unit tested, but has poor test coverage.
+
+In spite of my limited knowledge and experience, I am truly proud of what I have accomplished in this project. Creating this app has greatly increased my understanding of Angular and APIs, although I have so much more to learn and understand (especially regarding unit testing). I hope to further this knowledge with many more projects in the future.
 
 ## Development server
 
