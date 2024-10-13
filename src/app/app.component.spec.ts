@@ -3,11 +3,12 @@ import { AppComponent } from './app.component';
 import { CameraContainerComponent } from './components/camera-container/camera-container.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { TitleBarComponent } from './components/title-bar/title-bar.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AppComponent, CameraContainerComponent],
+      declarations: [AppComponent, CameraContainerComponent, TitleBarComponent],
       providers: [provideHttpClient(), provideHttpClientTesting],
     }).compileComponents();
   });

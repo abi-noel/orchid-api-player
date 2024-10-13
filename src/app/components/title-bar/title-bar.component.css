@@ -14,12 +14,15 @@
 
   z-index: 1;
 
+  /* Any change to the top position of the navbar (for example, 
+  moving it up to hide or back down to show) will be smoothly 
+  animated. */
   transition: top 0.5s;
 }
 
-/*Class will be displayed when the user scrolls up*/
+/*Class will be triggered when the user scrolls down*/
 .navbar.hidden {
-  top: -80px;
+  top: -60px;
   box-shadow: none;
 }
 
